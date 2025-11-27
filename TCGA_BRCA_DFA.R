@@ -100,15 +100,15 @@ colnames(colData(data))
 # Filter samples with PAM50 subtype annotation
 subtype_col <- "paper_BRCA_Subtype_PAM50"
 
-data_filtered <- data[, !is.na(colData(data)[[subtype_col]])]
+brca_filtered <- data[, !is.na(colData(data)[[subtype_col]])]
 
 # Set factor levels for PAM50
-colData(data_filtered)[[subtype_col]] <-
-  factor(colData(data_filtered)[[subtype_col]],
+colData(brca_filtered)[[subtype_col]] <-
+  factor(colData(brca_filtered)[[subtype_col]],
          levels = c("LumA", "LumB", "Her2", "Basal", "Normal"))
 
 # Build DESeqDataSet
-dds <- DESeqDataSet(data_filtered, design = ~ paper_BRCA_Subtype_PAM50)
+dds <- DESeqDataSet(brca_filtered, design = ~ paper_BRCA_Subtype_PAM50)
 
 # Filter low-count genes
 dds <- dds[rowSums(counts(dds)) > 10, ]
