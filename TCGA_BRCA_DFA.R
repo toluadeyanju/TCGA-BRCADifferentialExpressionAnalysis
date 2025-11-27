@@ -62,18 +62,18 @@ library(stringr)
 # 2. Download / prepare data#
 #############################
 
-# Query TCGA-BRCA HTSeq counts
+# Query TCGA-BRCA STAR counts
 query <- GDCquery(
   project      = "TCGA-BRCA",
   data.category = "Transcriptome Profiling",
   data.type     = "Gene Expression Quantification",
-  workflow.type = "HTSeq - Counts"
+  workflow.type = "STAR - Counts"
 )
 
 GDCdownload(query)
 data <- GDCprepare(query)   # SummarizedExperiment
 
-# (Optional) Save object for reuse
+# (Optional) Save object for reuse. This saves time as it ensures the large file would not be re-downloaded.
 dir.create("data", showWarnings = FALSE)
 save(data, file = "data/TCGA_BRCA_SE.rda")
 
