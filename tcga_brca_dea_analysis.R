@@ -164,7 +164,7 @@ p <- EnhancedVolcano(
 
 print(p)
 
-ggplot2::ggsave("volcano_tall_selectlabels2.png",
+ggplot2::ggsave("volcano_tall.png",
                 plot = p,
                 width = 18,
                 height = 14,   # increase height to spread y axis
