@@ -51,6 +51,3 @@ Data: Variance-stabilizing transformed (vst) counts, scaled by row.
   File: plots/combined_enrichment_basal_vs_luma.png
 
   Combines the top 10 most significant terms from both GO-BP and KEGG into a single bubble plot for easy comparison. The bubble size represents the number of genes found       (Count), and the position represents the Gene Ratio (proportion of DEGs in the pathway).
-Package Installation
-
-The installation block in the R script (tcga_brca_de_analysis.R) is commented out, but should be run once to set up the environment.
