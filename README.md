@@ -1,10 +1,11 @@
 TCGA-BRCA Differential Expression Analysis (PAM50 Subtypes)
-Exploring differences between Basal and Luminal A subtypes
+Exploring genetic differences between Basal and Luminal A subtypes
+The primary objective is to identify and characterize the molecular differences, including differentially expressed genes (DEGs) and enriched biological pathways, between the aggressive Basal-like and the more common Luminal A (LumA) molecular subtypes, using the PAM50 classification system.
 
-This repository contains the R script used to perform differential genetic expression analysis and functional enrichment analysis using publicly available data from the The Cancer Genome Atlas Project.
+This repository contains the R script used to perform differential genetic expression analysis and functional enrichment analysis using publicly available data from the Cancer Genome Atlas Project.
 
-The primary script tcga_brca_de_analysis.R executes the following steps
-1. Data Acquisition: Using the TCGABiolinks package to query and download gene counts and associated clinical metadata for TCGA BRCA dataset
+The primary script, tcga_brca_de_analysis.R executes the following steps
+1. Data Acquisition: Using the TCGABiolinks package to query and download gene counts and associated clinical metadata for the TCGA BRCA dataset
 2. Data Preparation: Filters samples based on the availability of the paper_BRCA_Subtype_PAM50 annotation and removes genes with low overall counts.
 3. Differential Expression: Performs Differential Genetic Expression Analysis (DGEA) using the DESeq2 package, comparing the Basal-like subtype against the Luminal A (LumA) subtype.
 4. Gene Annotation: Maps Ensembl Gene IDs to HUGO Gene Symbols using the org.Hs.eg.db annotation package.
