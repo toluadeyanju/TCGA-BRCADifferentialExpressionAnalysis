@@ -1,12 +1,13 @@
 ###############################################################################
 # Project: TCGA-BRCADifferentialExpressionAnalysis
 # Author: Toluwanimi Adeyanju (toluwanimiadeyanju@gmail.com; ORCID:0000-0002-4433-0496)
+# AI Partner: Open AI, Google Gemini
 # Date: 2025-11-27
 # R Version: 4.5.2
 #
 # Description:
 #   Processes publicly available TCGA-BRCA data:
-#     1. Download / prepare counts & clinical metadata (TCGAbiolinks)
+#     1. Download/prepare counts & clinical metadata (TCGAbiolinks)
 #     2. Differential expression analysis (DESeq2)
 #     3. GO and KEGG enrichment (clusterProfiler)
 ###############################################################################
